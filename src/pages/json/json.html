@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Contact
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label><strong>Name:</strong></ion-label>
+    <ion-input type="text" [(ngModel)]="m.name"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label><strong>Birthday:</strong></ion-label>
+    <ion-input type="text" [(ngModel)]="m.ns"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label><strong>Class:</strong></ion-label>
+    <ion-input type="text" [(ngModel)]="m.class"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label><strong>Phone:</strong></ion-label>
+    <ion-input type="text" [(ngModel)]="m.phone"></ion-input>
+  </ion-item>
+  <div class="row">
+    <div class="col-xs-6">
+      <button ion-button  type="submit" (click)=xuly()>nhap</button>
+    </div>
+    <div class="col-xs-6">
+      <button ion-button type="submit" (click)=boqua()>Bo qua</button>
+    </div>
+  </div>
+  <ion-list>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-3 >
+         Name
+        </ion-col>
+        <ion-col col-3 >
+          Brithday
+         </ion-col>
+         <ion-col col-3 >
+          Class
+         </ion-col>
+         <ion-col col-3 >
+          phone
+         </ion-col>
+      </ion-row>
+      <ion-row *ngFor="let x of m1,let i = index">
+        <ion-col col-3 >
+          {{x.name}}
+         </ion-col>
+         <ion-col col-3 >
+         {{x.ns}}
+         </ion-col>
+         <ion-col col-3 >
+         {{x.class}}
+         </ion-col>
+         <ion-col col-3 >
+          {{x.phone}}
+          </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-list>
+</ion-content>

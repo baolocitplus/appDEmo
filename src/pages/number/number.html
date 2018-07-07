@@ -14,5 +14,14 @@
 
 
 <ion-content padding>
-
+  <ion-item>
+    <ion-label><strong>Số a:</strong></ion-label>
+    <ion-input type="number" [(ngModel)]="a"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label><strong>Số b:</strong></ion-label>
+    <ion-input type="number" [(ngModel)]="b"></ion-input>
+  </ion-item>
+  <button ion-button block (click)="xuly()">Kết quả</button>
+  <ion-title>{{kq}}</ion-title>
 </ion-content>

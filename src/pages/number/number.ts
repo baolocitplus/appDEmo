@@ -15,7 +15,14 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class NumberPage {
 
+  kq : number;
+  a: number;
+  b: number;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+  }
+
+  xuly(){
+    this.kq = this.a*1 + this.b*1;
   }
 
   ionViewDidLoad() {
